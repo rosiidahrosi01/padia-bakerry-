@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<title>RENA BAKERY - Maison Royale</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="bakery, roti, kue, rena bakery, estetik, premium, pink luxury">
+	<meta name="description" content="Maison Royale - Rena Bakery menyediakan berbagai roti dan kue lezat berkualitas tinggi dengan cita rasa klasik nan mewah.">
+	
+	<!-- INTEGRASI LIBRARY ONLINE (CDN) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<img src="ChatGPT Image 21 Jun 2026, 12.00.13.png" alt="">
+
+	<!-- KODE TAMPILAN & DESAIN (TEMA LUXURY PINK & GOLD) -->
+	<style>
+		body {
+			background: #ffffff;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			overflow-x: hidden;
+			color: #4a3429;
+		}
+
+		h1, h2, h3, h4, h5 {
+			font-family: 'Playfair Display', serif;
+			font-weight: 700;
+			color: #4a3429;
+		}
+
+		.heading {
+			font-size: 38px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-bottom: 10px;
+		}
+
+		/* Mengubah warna border/garis hiasan menjadi Rose Pink */
+		hr {
+			border: 1px solid #e29595;
+			width: 80px;
+			margin-top: 10px;
+			margin-bottom: 40px;
+		}
+
+		.parallax-section {
+			padding-top: 100px;
+			padding-bottom: 100px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		/* --- Menu Navigasi Atas (Navbar) --- */
+		.navbar-default {
+			background-color: rgba(255, 250, 250, 0.96); /* Sentuhan Rose White */
+			border-color: transparent;
+			padding: 15px 0;
+			transition: all 0.4s ease;
+			box-shadow: 0 2px 15px rgba(226, 149, 149, 0.1);
+		}
+
+		.navbar-default .navbar-brand {
+			font-family: 'Playfair Display', serif;
+			font-size: 26px;
+			font-weight: bold;
+			color: #4a3429 !important;
+			letter-spacing: 2px;
+		}
+
+		.navbar-default .navbar-nav li a {
+			font-family: 'Roboto', sans-serif;
+			color: #6f4e37 !important;
+			font-weight: 500;
+			letter-spacing: 1px;
+			font-size: 13px;
+		}
+
+		.navbar-default .navbar-nav li a:hover {
+			color: #e29595 !important; /* Hover berubah menjadi Pink */
+		}
+
+		/* --- Tampilan Awal: MENGGUNAKAN FILE 1000420133_2.png --- */
+		#home {
+			background: linear-gradient(rgba(20, 15, 15, 0.55), rgba(20, 15, 15, 0.55)), url('1000420133_2.png') no-repeat center center;
+			background-size: cover;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			color: #ffffff;
+		}
+
+		#home h1 {
+			font-size: 76px;
+			color: #fffcf7;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			letter-spacing: 4px;
+			text-shadow: 2px 4px 15px rgba(0,0,0,0.5);
+		}
+
+		#home h2 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 22px;
+			color: #ffccd5; /* Subtitle Pink Pastel cerah */
+			margin-bottom: 40px;
+			font-weight: 400;
+			letter-spacing: 8px;
+			text-transform: uppercase;
+			text-shadow: 1px 2px 5px rgba(0,0,0,0.4);
+		}
+
+		/* Tombol Utama Bertema Soft Rose Gold */
+		.btn-default {
+			font-family: 'Roboto', sans-serif;
+			background: #e29595;
+			color: #ffffff !important;
+			border: none;
+			padding: 16px 45px;
+			font-size: 14px;
+			font-weight: bold;
+			border-radius: 30px;
+			transition: all 0.3s ease;
+			letter-spacing: 2px;
+			box-shadow: 0 5px 20px rgba(226, 149, 149, 0.4);
+		}
+
+		.btn-default:hover {
+			background: #fff5f5;
+			color: #e29595 !important;
+			transform: translateY(-3px);
+			box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+		}
+
+		/* --- Galeri Guntingan Proporsional (Sempurna & Tidak Potong) --- */
+		#gallery {
+			background-color: #fff5f5; /* Background section diubah ke Soft Pinkish White */
+		}
+
+		#gallery .gallery-item {
+			margin-bottom: 35px;
+			background: #ffffff;
+			padding: 15px;
+			border-radius: 12px;
+			box-shadow: 0 6px 25px rgba(226, 149, 149, 0.08); /* Shadow bernuansa pink tipis */
+			transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		#gallery .gallery-item:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 15px 35px rgba(226, 149, 149, 0.2);
+		}
+
+		/* Kontainer Rasio Gambar Konstan Dinamis agar tidak pernah terpotong teks */
+		.img-container {
+			position: relative;
+			width: 100%;
+			padding-bottom: 75%; /* Menjaga dimensi aspect-ratio tetap 4:3 */
+			overflow: hidden;
+			border-radius: 8px;
+			margin-bottom: 15px;
+			background-color: #ffeef0;
+		}
+
+		.img-container img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			transition: transform 0.5s ease;
+		}
+
+		#gallery .gallery-item:hover .img-container img {
+			transform: scale(1.04);
+		}
+
+		#gallery h3 {
+			font-size: 20px;
+			margin-top: 10px;
+			margin-bottom: 6px;
+			color: #4a3429;
+		}
+
+		#gallery span {
+			font-family: 'Roboto', sans-serif;
+			color: #c68b8b; /* Teks deskripsi warna Muted Pink */
+			font-size: 13px;
+			display: block;
+			letter-spacing: 0.5px;
+		}
+
+		/* --- Daftar Menu / Daftar Harga (#menu) --- */
+		#menu {
+			background: #ffffff;
+		}
+
+		.menu-item {
+			margin-bottom: 30px;
+		}
+
+		#menu h4 {
+			font-size: 20px;
+			color: #4a3429;
+			font-weight: bold;
+			margin-top: 15px;
+			border-bottom: 1px dashed #e29595;
+			padding-bottom: 10px;
+		}
+
+		#menu h4 span {
+			float: right;
+			color: #e29595;
+			font-weight: 700;
+		}
+
+		#menu h5 {
+			font-family: 'Roboto', sans-serif;
+			color: #7a6e67;
+			font-style: italic;
+			margin-top: 8px;
+			font-weight: 400;
+			font-size: 14px;
+		}
+
+		/* --- Tim Bakers (#team) --- */
+		#team {
+			background: #fff5f5;
+			text-align: center;
+		}
+
+		#team .team-wrapper {
+			background: #ffffff;
+			padding: 40px 25px;
+			border-radius: 12px;
+			box-shadow: 0 4px 20px rgba(226, 149, 149, 0.05);
+			margin-bottom: 30px;
+		}
+
+		#team img {
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			object-fit: cover;
+			margin: 0 auto 25px auto;
+			border: 5px solid #fff5f5;
+			box-shadow: 0 6px 15px rgba(226, 149, 149, 0.15);
+		}
+
+		#team h4 {
+			font-size: 22px;
+			margin-bottom: 5px;
+		}
+
+		#team h3 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 13px;
+			color: #e29595;
+			text-transform: uppercase;
+			margin-top: 0;
+			letter-spacing: 2px;
+			font-weight: bold;
+		}
+
+		/* --- Formulir Kontak (#contact) --- */
+		#contact {
+			background: #ffffff;
+		}
+
+		#contact .form-control {
+			font-family: 'Roboto', sans-serif;
+			background: #fff5f5;
+			border: 1px solid #f0e2e2;
+			border-radius: 8px;
+			box-shadow: none;
+			margin-bottom: 20px;
+			padding: 16px;
+			height: auto;
+			color: #4a3429;
+		}
+
+		#contact .form-control:focus {
+			border-color: #e29595;
+			box-shadow: 0 0 8px rgba(226, 149, 149, 0.2);
+		}
+
+		#contact input[type="submit"] {
+			font-family: 'Roboto', sans-serif;
+			background: #4a3429;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 1px;
+			transition: 0.3s;
+			border: none;
+			padding: 15px;
+			border-radius: 8px;
+		}
+
+		#contact input[type="submit"]:hover {
+			background: #e29595;
+		}
+
+		/* --- Bagian Bawah / Footer --- */
+		footer {
+			background: #2b1c15;
+			color: #cfc2ba;
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+
+		footer h2.heading {
+			font-size: 22px;
+			color: #ffffff;
+			margin-bottom: 30px;
+			letter-spacing: 1px;
+		}
+
+		footer p {
+			font-family: 'Roboto', sans-serif;
+			font-size: 14px;
+			line-height: 1.8;
+		}
+
+		footer p span {
+			float: right;
+			color: #ffffff;
+		}
+
+		.social-icon {
+			padding: 0;
+			margin-top: 20px;
+		}
+
+		.social-icon li {
+			display: inline-block;
+			list-style: none;
+			margin-right: 12px;
+		}
+
+		.social-icon li a {
+			background: #412f26;
+			color: #ffffff;
+			width: 42px;
+			height: 42px;
+			line-height: 42px;
+			text-align: center;
+			border-radius: 50%;
+			display: block;
+			transition: 0.3s ease;
+		}
+
+		.social-icon li a:hover {
+			background: #e29595;
+			transform: scale(1.1);
+		}
+
+		#copyright {
+			background: #1f130e;
+			color: #8c766c;
+			padding: 30px 0;
+			text-align: center;
+		}
+
+		#copyright h3 {
+			color: #ffffff;
+			font-size: 18px;
+			margin-bottom: 5px;
+			letter-spacing: 1px;
+		}
+	</style>
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<!-- NAVIGASI (NAVBAR) -->
+<section class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">RENA BAKERY</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home" class="smoothScroll">HOME</a></li>
+				<li><a href="#gallery" class="smoothScroll">BAKERY GALLERY</a></li>
+				<li><a href="#menu" class="smoothScroll">SPECIAL MENU</a></li>
+				<li><a href="#team" class="smoothScroll">BAKERS</a></li>
+				<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Halaman Awal / Hero Banner Dengan Gambar Latar Belakang Mewah Toko Roti -->
+<section id="home" class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1 class="wow fadeInDown" data-wow-delay="0.2s">Maison Royale</h1>
+                <h2 class="wow fadeInUp" data-wow-delay="0.4s">RENA BAKERY</h2>
+                <a href="#gallery" class="smoothScroll btn btn-default wow fadeInUp" data-wow-delay="0.6s">
+                   DISCOVER GALLERY
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALERI SEPENUHNYA TEMA PREMIUM PINK & LUXURY -->
+<section id="gallery" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+				<h1 class="heading">Bakery Gallery</h1>
+				<hr>
+			</div>
+			
+			<!-- Produk 1: Cupcake Premium -->
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="gallery-item">
+					<div class="img-container">
+						<img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=600" alt="Cupcake Manis dan Creamy">
+					</div>
+					<h3>Artisan Cupcake Creamy</h3>
+					<span>Luxury Cream / Fresh Berry / Gold Flakes</span>
+				</div>
+			</div>
+
+			<!-- Produk 2: Croissant Emas Mewah -->
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+				<div class="gallery-item">
+					<div class="img-container">
+						<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=600" alt="Croissant Premium Luxury">
+					</div>
+					<h3>Croissant Premium Gold</h3>
+					<span>Flaky French Butter / Gold Leaf Ornament</span>
+				</div>
+			</div>
+
+			<!-- Produk 3: Baguette Perancis Mewah -->
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+				<div class="gallery-item">
+					<div class="img-container">
+						<img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=600" alt="Baguette Perancis Premium">
+					</div>
+					<h3>Baguette Perancis</h3>
+					<span>Premium Quality / Authentic Crisp Texture</span>
+				</div>
+			</div>
+
+			<!-- Produk 4: Roti Gandum Sehat Premium -->
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+				<div class="gallery-item">
+					<div class="img-container">
+						<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600" alt="Roti Gandum">
+					</div>
+					<h3>Sourdough Gandum</h3>
+					<span>Sehat / Ragi Alami / Serat Tinggi</span>
+				</div>
+			</div>
+
+			<!-- Produk 5: Donat Vanilla Mewah -->
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+				<div class="gallery-item">
+					<div class="img-container">
+						<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600" alt="Donat Vanilla Premium">
+					</div>
+					<h3>Donat Vanilla Luxury</h3>
+					<span>White Glazed / Sweet Pearl Sprinkles</span>
+				</div>
+			</div>
+
+			<!-- Produk 6: Cinnamon Roll Premium -->
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
+				<div class="gallery-item">
+					<div class="img-container">
+						<img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?q=80&w=600" alt="Cinnamon Roll Premium">
+					</div>
+					<h3>Cinnamon Roll</h3>
+					<span>Roti Gulung / Kayu Manis / Glaze Vanilla</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- SPECIAL MENU & HARGA -->
+<section id="menu" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+				<h1 class="heading">Special Menu</h1>
+				<hr>
+			</div>
+			<div class="col-md-6 col-sm-12 menu-item">
+				<h4>Artisan Strawberry Cupcake <span>Rp 28.000</span></h4>
+				<h5>Kue spons lembut berhias stroberi organik segar dengan sentuhan emas</h5>
+			</div>
+			<div class="col-md-6 col-sm-12 menu-item">
+				<h4>Croissant Premium Gold <span>Rp 26.000</span></h4>
+				<h5>Pastry khas Perancis berlapis mentega murni dengan taburan serpihan emas murni</h5>
+			</div>
+			<div class="col-md-6 col-sm-12 menu-item">
+				<h4>Baguette Perancis Premium <span>Rp 24.000</span></h4>
+				<h5>Roti panjang otentik renyah di luar, berongga lembut sempurna di dalam</h5>
+			</div>
+			<div class="col-md-6 col-sm-12 menu-item">
+				<h4>Donat Vanilla Luxury <span>Rp 5.000</span></h4>
+				<h5>Donat kentang super empuk dengan lapisan gula vanila putih dan mutiara manis</h5>
+			</div>
+			<div class="col-md-6 col-sm-12 menu-item">
+				<h4>Roti Gandum Almond <span>Rp 35.000</span></h4>
+				<h5>Roti gandum utuh dengan taburan melimpah kacang almond panggang</h5>
+			</div>
+			<div class="col-md-6 col-sm-12 menu-item">
+				<h4>Cinnamon Roll <span>Rp 22.000</span></h4>
+				<h5>Roti gulung harum kayu manis dengan siraman gula vanilla kental</h5>
+			</div>
+		</div>
+	</div>
+</section>		
+
+<!-- TIM BAKER -->
+<section id="team" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+				<h1 class="heading">Meet Our Bakers</h1>
+				<hr>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="team-wrapper">
+					<img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=400" alt="Thanya">
+					<h4>Thanya</h4>
+					<h3>Head Baker</h3>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+				<div class="team-wrapper">
+					<img src="team3.jpg" alt="Lynda">
+					<h4>Lynda</h4>
+					<h3>Pastry Specialist</h3>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="team-wrapper">
+					<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400" alt="Jenny Ko">
+					<h4>Jenny Ko</h4>
+					<h3>Cake Decorator</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- KONTAK -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
+				<h1 class="heading">Contact Us</h1>
+				<hr>
+			</div>
+			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.4s">
+				<form action="#" method="post">
+					<div class="col-md-6 col-sm-6">
+						<input name="name" type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+				  	</div>
+					<div class="col-md-6 col-sm-6">
+						<input name="email" type="email" class="form-control" id="email" placeholder="Email Aktif">
+				  	</div>
+					<div class="col-md-12 col-sm-12">
+						<textarea name="message" rows="6" class="form-control" id="message" placeholder="Pesan atau Pertanyaan Anda"></textarea>
+					</div>
+					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+						<input name="submit" type="submit" class="form-control" id="submit" value="Kirim Pesan">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+				<h2 class="heading">Contact Info.</h2>
+				<p><i class="fa fa-phone" style="color: #e29595; margin-right: 5px;"></i> Phone: <strong>0821-1234-5678</strong></p>
+				<p><i class="fa fa-map-marker" style="color: #e29595; margin-right: 5px;"></i> Jl. Toko Roti No. 12, Lampung</p>
+			</div>
+			<div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
+				<h2 class="heading">Open Hours</h2>
+				<p>Minggu <span>08:00 AM - 09:00 PM</span></p>
+				<p>Senin - Jumat <span>07:00 AM - 09:00 PM</span></p>
+				<p>Sabtu <span>07:00 AM - 10:00 PM</span></p>
+			</div>
+			<div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+				<h2 class="heading">Follow Us</h2>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+					<li><a href="#" class="fa fa-instagram"></a></li>
+					<li><a href="#" class="fa fa-pinterest"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- HAK CIPTA -->
+<section id="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h3>RENA BAKERY</h3>
+				<p>Copyright © RENA BAKERY | Designed Elegantly</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- INTEGRASI JAVASCRIPT ONLINE (CDN) -->	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+	new WOW().init();
+	
+	$('.smoothScroll').click(function() {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: target.offset().top - 70
+				}, 800);
+				return false;
+			}
+		}
+	});
+</script>
+
+</body>
+</html>
